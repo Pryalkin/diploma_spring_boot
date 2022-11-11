@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -22,11 +23,11 @@ public class Announcement {
     @OneToOne
     private Employee creator;
     @OneToMany
-    private Emotion emotions;
+    private List<Emotion> emotions;
     @OneToMany
-    private Comment comments;
+    private List<Comment> comments;
     @OneToMany
-    private Viewing views;
+    private List<Viewing> views;
     @Column(name = "date_create")
     private Date dateCreate;
 }

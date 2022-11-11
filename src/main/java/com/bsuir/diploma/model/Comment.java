@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -22,7 +23,7 @@ public class Comment {
     @Size(min = 1, max = 5000)
     private String message;
     @OneToMany
-    private Emotion emotions;
+    private List<Emotion> emotions;
     @Column(name = "date_create")
     private Date dateCreate;
 }
