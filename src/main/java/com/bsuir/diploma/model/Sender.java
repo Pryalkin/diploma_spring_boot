@@ -1,5 +1,6 @@
 package com.bsuir.diploma.model;
 
+import com.bsuir.diploma.model.employee.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
