@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -19,5 +20,5 @@ public class Room {
     @OneToOne
     private Employee creator;
     @OneToMany
-    private Sender community;
+    private List<Sender> community;
 }

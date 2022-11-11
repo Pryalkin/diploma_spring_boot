@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -17,7 +18,7 @@ public class Department {
     private Long id;
     private String title;
     @OneToMany
-    private Employee administration;
+    private List<Employee> administration;
     @OneToMany
-    private Employee community;
+    private List<Employee> community;
 }
