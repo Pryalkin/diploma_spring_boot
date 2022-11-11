@@ -1,4 +1,4 @@
-package com.bsuir.diploma.model;
+package com.bsuir.diploma.model.employee;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,4 +25,10 @@ public class User {
     private String phone;
     @Email
     private String email;
+    private String username;
+    private String password;
+    @Column(name = "is_not_locked")
+    private boolean isNotLocked;
+    @Column(name = "is_active")
+    private boolean isActive;
 }
