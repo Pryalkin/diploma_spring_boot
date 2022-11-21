@@ -1,4 +1,4 @@
-package com.bsuir.diploma.model;
+package com.bsuir.diploma.model.util;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

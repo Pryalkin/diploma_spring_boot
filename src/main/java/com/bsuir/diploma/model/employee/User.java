@@ -1,5 +1,6 @@
 package com.bsuir.diploma.model.employee;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,15 +21,22 @@ public class User {
     private String name;
     private String surname;
     private String patronymic;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy hh:mm:ss", timezone = "Europe/Minsk")
     @Column(name = "date_of_birth")
     private Date dateOfBirth;
     private String phone;
-    @Email
     private String email;
     private String username;
     private String password;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy hh:mm:ss", timezone = "Europe/Minsk")
+    @Column(name = "last_login_date_display")
+    private Date lastLoginDateDisplay;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy hh:mm:ss", timezone = "Europe/Minsk")
+    @Column(name = "last_login_date")
+    private Date lastLoginDate;
+    private Boolean confirmation;
     @Column(name = "is_not_locked")
-    private boolean isNotLocked;
+    private Boolean isNotLocked;
     @Column(name = "is_active")
-    private boolean isActive;
+    private Boolean isActive;
 }

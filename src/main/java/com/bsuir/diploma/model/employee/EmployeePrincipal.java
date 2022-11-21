@@ -38,7 +38,7 @@ public class EmployeePrincipal implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
-        return employee.getUser().isNotLocked();
+        return employee.getUser().getIsNotLocked();
     }
 
     @Override
@@ -48,6 +48,6 @@ public class EmployeePrincipal implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return employee.getUser().isActive();
+        return employee.getUser().getIsActive();
     }
 }
