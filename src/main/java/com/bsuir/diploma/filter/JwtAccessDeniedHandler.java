@@ -1,6 +1,6 @@
 package com.bsuir.diploma.filter;
 
-import com.bsuir.diploma.model.HttpResponse;
+import com.bsuir.diploma.model.util.HttpResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
